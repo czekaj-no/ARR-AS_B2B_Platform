@@ -1,0 +1,167 @@
+.b2b-section {
+  background-color: $color-cream;
+  padding: 60px 0;
+
+  .container {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .b2b-text {
+    flex: 1 1 500px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .b2b-lead {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .b2b-benefits {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+
+      li {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .b2b-buttons {
+      display: flex;
+      gap: 1rem;
+
+      .btn {
+        font-weight: bold;
+        padding: 0.7rem 1.2rem;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .btn-primary {
+        background-color: $color-gold;
+        color: black;
+
+        &:hover {
+          background-color: $color-gold-dark;
+        }
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        border: 2px solid $color-gold;
+        color: black;
+
+        &:hover {
+          background-color: $color-gold;
+        }
+      }
+    }
+  }
+
+  .b2b-image {
+    flex: 1 1 400px;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.b2b-steps-section,
+.b2b-faq-section {
+  background-color: $color-cream;
+  padding: 60px 20px;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+.b2b-steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .step {
+    background-color: $color-white;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(25% - 20px);
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+      display: block;
+      color: $color-gold-dark;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+
+.faq-item {
+  margin-bottom: 1.2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .faq-question {
+    width: 100%;
+    background-color: $color-wheat;
+    border: none;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($color-wheat, 5%);
+    }
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    background-color: white;
+    padding: 0 1rem;
+    border-left: 2px solid $color-gold;
+    border-right: 2px solid $color-gold;
+
+    p {
+      margin: 1rem 0;
+    }
+  }
+
+  &.active .faq-answer {
+    max-height: 300px; // wystarczająco na jedną odpowiedź
+    padding: 1rem;
+  }
+}

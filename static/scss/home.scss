@@ -1,0 +1,275 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity:0.65;
+
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $color-black;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-button {
+      background-color: $color-gold;
+      color: $color-black;
+      padding: 0.9rem 1.4rem;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+
+      &:hover {
+        background-color: darken($color-gold, 5%);
+      }
+    }
+  }
+}
+
+.benefits-section {
+  background-color: $color-cream;
+  padding: 4rem 1rem;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+    .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+.benefit-card {
+   padding: 2rem;
+    border-radius: 1rem;
+    color: black;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s;
+
+    i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: black;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+
+.carousel-products-section {
+  background-color: $color-wheat;
+  padding: 40px 0;
+  text-align: center;
+  border-radius: 7px;
+}
+      .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+
+.carousel-products-container {
+  position: relative;
+  width: $max-width;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.carousel-item {
+  width: calc(33.333% - 13.33px);
+  flex: 0 0 calc(33.333% - 13.33px);
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+.carousel-item img {
+  height: 200px;
+  border-radius: 7px;
+
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $color-cream;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+.cp-wrapper-with-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+}
+.carousel-btn {
+  background-color: $color-gold;
+  border: none;
+  padding: 10px 14px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: $color-gold-dark;
+}
+
+.business-collab-section {
+  background-color: $color-cream;
+  padding: 60px 0;
+}
+
+.business-collab-wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.business-collab-text {
+  flex: 1 1 45%;
+}
+
+.business-collab-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.business-collab-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.business-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700 !important;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: $color-gold;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: $color-gold-dark;
+}
+
+.btn-secondary {
+  background-color: $color-cream;
+  color: #000;
+  border: 2px solid $color-gold;
+}
+
+.btn-secondary:hover {
+  background-color: #fffbe7;
+}
+
+.business-collab-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.business-collab-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Kontakt{% endblock %}
+
+{% block content %}
+
+<section class="contact-section">
+  <div class="container contact-wrapper">
+    <div class="contact-info">
+      <h2>Skontaktuj się z nami</h2>
+      <p><strong>Telefon:</strong> +48 123 456 789</p>
+      <p><strong>Email:</strong> biuro@arras.pl</p>
+      <p><strong>Adres siedziby:</strong> ul. Przykładowa 1, 00-000 Warszawa</p>
+      <p><strong>Adres sklepu:</strong> ul. Sklepowa 2, 00-001 Warszawa</p>
+      <p><strong>NIP:</strong> 000-000-00-00</p>
+      <p><strong>REGON:</strong> 000000000</p>
+      <p><strong>KRS:</strong> 0000000000</p>
+      <p><strong>Godziny pracy:</strong><br>Pon–Pt: 8:00–16:00</p>
+    </div>
+
+    <div class="contact-form">
+      <form method="POST" action="#">
+        <label>Imię i nazwisko*</label>
+        <input type="text" required>
+
+        <label>Email*</label>
+        <input type="email" required>
+
+        <label>Telefon</label>
+        <input type="text">
+
+        <label>Nazwa firmy</label>
+        <input type="text">
+
+        <label>Wiadomość*</label>
+        <textarea required></textarea>
+
+        <button type="submit" class="btn">Wyślij wiadomość</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="contact-map">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.5342914703976!2d21.004376315842324!3d52.22967597975709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669f8b5e4f%3A0xdee31f3f7aa4d507!2sWarszawa!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl" 
+    width="100%" 
+    height="400" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+{% endblock %}

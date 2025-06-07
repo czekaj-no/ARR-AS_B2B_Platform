@@ -1,0 +1,151 @@
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'components';
+@import 'home';
+@import 'for_business';
+@import 'about';
+@import 'contact';
+
+
+// Reset i podstawy
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 40px;
+  font-family: $font-alt;
+  background-color: $color-cream;
+  color: $color-black;
+  line-height: 1.6;
+}
+
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: $color-beige;
+  border-bottom: 1px solid darken($color-beige, 10%);
+  padding: 0.4rem 0;
+
+  .container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    text-align: center;
+    gap: 0.5rem;
+
+    a {
+      color: $color-black;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+
+    .topbar-button {
+      background-color: $color-gold;
+      color: $color-black;
+      padding: 0.3rem 0.8rem;
+      margin-left: 0.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 0.85rem;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: darken($color-gold, 5%);
+        color: $color-black;
+      }
+    }
+  }
+}
+
+
+.container {
+    font-size: 0.85rem;
+
+    a {
+      color: $color-black;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+
+
+header {
+  background-color: $color-cream;
+  border-bottom: 1px solid $color-wheat;
+
+  .container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .logo {
+      width: $logo-size;
+      height: auto;
+    }
+
+    .slogan {
+      font-size: 1rem;
+      color: $color-black;
+      font-style: italic;
+    }
+  }
+
+ .header-right {
+  margin-left: auto;
+
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+
+    li a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      color: $color-black;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+}}
+
+

@@ -1,0 +1,23 @@
+// Colors
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gold: #c6a664;
+$color-cream: #f5f1ea;
+$color-beige: #e0d2b6;
+$color-wheat: #e0d2b6;
+$color-wheat-dark: darken ($color-wheat, 20%);
+$color-gold-dark: darken($color-gold, 20%);
+$color-hover: darken($color-gold, 10%);
+$color-gold-dark: darken($color-gold, 10%);
+$color-footer-bottom:#bca58d;
+
+// Fonts
+$font-main: 'Georgia', serif;
+$font-alt: 'Arial', sans-serif;
+
+// Spacing
+$section-padding: 2rem 1rem;
+
+$max-width: 1200px;
+
+$logo-size: 120px;

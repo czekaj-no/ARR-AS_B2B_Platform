@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <img src="{% static 'img/hero-main.jpg' %}" alt="Gotowanie ze szczyptą miłości" class="hero-image">
+    <div class="hero-content">
+      <h1>Gotowanie ze szczyptą miłości</h1>
+      <p>Polska tradycja na talerzu – od serca, dla Ciebie i Twoich klientów.</p>
+      <p>Gotujemy tak, jak robiły to nasze babcie – z prostych składników, bez ulepszaczy. </p>
+      <a href="{% url 'product_entry' %}" class="hero-button">Zobacz sklep</a>
+    </div>
+  </section>
+
+<section class="benefits-section">
+  <div class="container">
+    <h2 class="section-title">Dlaczego warto nas wybrać?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <i class="fas fa-utensils"></i>
+        <h3>Tradycyjna receptura</h3>
+        <p>Jak u babci – smak prawdziwej domowej kuchni.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-leaf"></i>
+        <h3>100% naturalnych składników</h3>
+        <p>Bez konserwantów, barwników i polepszaczy.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-clock"></i>
+        <h3>Szybka realizacja</h3>
+        <p>Ekspresowa obsługa – zawsze na czas.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-truck"></i>
+        <h3>Transport chłodniczy</h3>
+        <p>Bezpieczna wysyłka z zachowaniem świeżości.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-snowflake"></i>
+        <h3>Mrożone, gotowe do podania</h3>
+        <p>Idealne do podgrzania lub dalszej sprzedaży.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-briefcase"></i>
+        <h3>Współpraca B2B</h3>
+        <p>Atrakcyjne warunki dla sklepów i gastronomii.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carousel-products-section">
+  <h2 class="section-title">Nasze smaczne produkty</h2>
+  <div class="carousel-products-container">
+<div class="cp-wrapper-with-arrows">
+  <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+    <div class="carousel-track-wrapper">
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <h3>Pierogi</h3>
+          <img src="{% static 'img/pierogi.jpg' %}" alt="">
+            <p><br>Tradycyjne pierogi z różnymi nadzieniami.Tradycyjne pierogi z różnymi nadzieniami.</p>
+        </div>
+        <div class="carousel-item">
+          <h3>Kluski</h3>
+          <img src="{% static 'img/kluski.jpg' %}" alt="">
+              <p><br>Pyszne polskie kluseczki. Pyszne polskie kluseczki. Pyszne polskie kluseczki</p>
+        </div>
+        <div class="carousel-item">
+          <h3>Naleśniki</h3>
+          <img src="{% static 'img/naleśniki.jpg' %}" alt="">
+              <p><br>Już wkrótce! <br>Puszyste naleśniki – idealne na słodko i wytrawnie.</p>
+        </div>
+        <div class="carousel-item">
+          <h3>Krokiety</h3>
+          <img src="{% static 'img/krokiety.jpg' %}" alt="">
+              <p><br>Już wkrótce! <br>Chrupiące krokiety z aromatycznym farszem.</p>
+        </div>
+      </div>
+    </div>
+
+  <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<section class="business-collab-section">
+  <div class="business-collab-wrapper">
+    <div class="business-collab-text">
+      <h2>Współpraca biznesowa</h2>
+      <p>Jesteś właścicielem sklepu, hurtowni lub lokalu gastronomicznego? Oferujemy tradycyjne, domowe produkty w większych ilościach – idealne do Twojej oferty. Dołącz do grona naszych partnerów. </p>
+      <p>Zarejestruj się i odbierz darmowy pakiet próbny!</p>
+      <div class="business-buttons">
+        <a href="{% url 'contact' %}" class="btn btn-primary">Zarejestruj się</a>
+        <a href="{% url 'contact' %}" class="btn btn-secondary">Skontaktuj się</a>
+      </div>
+    </div>
+    <div class="business-collab-image">
+      <img src="{% static 'img/collaboration.jpg' %}" alt="Współpraca">
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

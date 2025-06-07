@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}O nas{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+  <div class="about-container">
+    <h2 class="section-title">Poznaj nas bliżej</h2>
+    <p class="about-intro">
+      ARR-AS to rodzinna firma, która od pokoleń pielęgnuje smaki polskiej kuchni. ARR-AS to rodzinna firma, która od pokoleń pielęgnuje smaki polskiej kuchni. Nasze pierogi, kluski i naleśniki to nie tylko produkty – to wspomnienia, które możesz przywołać przy każdym kęsie.
+    </p>
+
+    <div class="about-row">
+      <div class="about-text">
+        <h3>Nasze korzenie</h3>
+        <p>
+          Bazujemy na tradycyjnych recepturach, przekazywanych z pokolenia na pokolenie. Nie używamy konserwantów – stawiamy na naturalność, jakość i smak, który łechce podniebienie.           Bazujemy na tradycyjnych recepturach, przekazywanych z pokolenia na pokolenie. Nie używamy konserwantów – stawiamy na naturalność, jakość i smak, który łechce podniebienie.
+
+        </p>
+         <p><br>
+          Bazujemy na tradycyjnych recepturach, przekazywanych z pokolenia na pokolenie. Nie używamy konserwantów – stawiamy na naturalność, jakość i smak, który łechce podniebienie.           Bazujemy na tradycyjnych recepturach, przekazywanych z pokolenia na pokolenie. Nie używamy konserwantów – stawiamy na naturalność, jakość i smak, który łechce podniebienie.
+
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="{% static 'img/team.jpg' %}" alt="Zespół ARR-AS">
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-text">
+        <h3>Gdzie działamy?</h3>
+        <p>
+          Nasza produkcja znajduje się pod Warszawą, a dostarczamy do sklepów i hurtowni spożywczych na terenie Warszawy i okolic.
+          Nasza produkcja znajduje się pod Warszawą, a dostarczamy do sklepów i hurtowni spożywczych na terenie Warszawy i okolic.
+          Nasza produkcja znajduje się pod Warszawą, a dostarczamy do sklepów i hurtowni spożywczych na terenie Warszawy i okolic.
+        </p>
+         <p><br>
+          Nasza produkcja znajduje się pod Warszawą, a dostarczamy do sklepów i hurtowni spożywczych na terenie Warszawy i okolic.
+          Nasza produkcja znajduje się pod Warszawą, a dostarczamy do sklepów i hurtowni spożywczych na terenie Warszawy i okolic.
+          Nasza produkcja znajduje się pod Warszawą, a dostarczamy do sklepów i hurtowni spożywczych na terenie Warszawy i okolic.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="{% static 'img/kitchen.jpg' %}" alt="Nasza kuchnia">
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-text">
+        <h3>Nasza misja</h3>
+        <p> Wierzymy, że smak ma znaczenie. Dlatego tworzymy produkty, które łączą tradycję z jakością – by zachować to, co najlepsze, i dzielić się tym dalej.
+
+          Wierzymy, że smak ma znaczenie. Dlatego tworzymy produkty, które łączą tradycję z jakością – by zachować to, co najlepsze, i dzielić się tym dalej.
+        </p>
+         <p><br> Wierzymy, że smak ma znaczenie. Dlatego tworzymy produkty, które łączą tradycję z jakością – by zachować to, co najlepsze, i dzielić się tym dalej.
+
+          Wierzymy, że smak ma znaczenie. Dlatego tworzymy produkty, które łączą tradycję z jakością – by zachować to, co najlepsze, i dzielić się tym dalej.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="{% static 'img/production.jpg' %}" alt="Produkcja wyrobów">
+      </div>
+    </div>
+
+    <div class="about-buttons">
+      <a href="{% url 'product_entry' %}" class="btn">Przejdź do sklepu</a>
+      <a href="{% url 'contact' %}" class="btn btn-outline">Skontaktuj się</a>
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock %}

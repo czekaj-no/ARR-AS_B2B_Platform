@@ -1,0 +1,119 @@
+.site-footer {
+  background-color: #9b8775			;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: $color-black;
+
+  .footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .footer-column {
+    flex: 1 1 200px;
+    min-width: 200px;
+
+    h4 {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p,
+    a {
+      margin: 0.2rem 0;
+      color: $color-black;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.4rem;
+      }
+    }
+  }
+
+  .footer-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-slogan {
+    font-style: italic;
+    color: $color-gold;
+    font-size: 1rem;
+  }
+  .auth-links {
+  margin-top: 0.5rem;
+
+  a {
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: underline;
+    color: $color-black;
+
+    &:hover {
+      color: $color-gold;
+    }
+  }
+}
+
+}
+
+.footer-bottom {
+  background-color: #6d594a	;
+  padding: 1.2rem 0;
+  font-size: 0.85rem;
+  color: $color-black;
+  text-align: center;
+
+  .container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .footer-bottom-links {
+    margin-bottom: 0.5rem;
+
+    a {
+      color: $color-black;
+      text-decoration: none;
+      margin: 0 0.8rem;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+
+  .footer-bottom-copy {
+    font-style: italic;
+    font-size: 0.75rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
