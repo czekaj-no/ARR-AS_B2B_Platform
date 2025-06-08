@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Nasze produkty{% endblock %}
+
+{% block content %}
+
+<section class="product-list-section">
+  <div class="container">
+<div class="category-buttons">
+  <a href="{% url 'product_list' %}" class="{% if not selected_category %}active{% endif %}">Wszystkie</a>
+  {% for category in categories %}
+    <a href="?kategoria={{ category.id }}" class="{% if selected_category == category.id %}active{% endif %}">
+      {{ category.name }}
+    </a>
+  {% endfor %}
+</div>
+
+    <h1 class="section-title">Nasze produkty</h1>
+    <div class="product-grid">
+      {% for product in products %}
+        <div class="product-card">
+            <img src="{{ product.image_main.url }}" alt="{{ product.name }}">
+            <h2>{{ product.name }}</h2>
+          </a>
+          <p>{{ product.description_short|truncatechars:100 }}</p>
+          {% with product.variants.all|dictsort:"price_b2c_brutto" as sorted_variants %}
+            <p class="product-price">od {{ sorted_variants.0.price_b2c_brutto }} zł</p>
+          {% endwith %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -5,8 +5,6 @@ urlpatterns = [
     # Home
     path('', views.home, name='home'),
 
-    # Product entry point (choose individual or B2B)
-    path('produkty/', views.product_entry_point, name='product_entry'),
 
     # Cart & checkout
     path('koszyk/', views.cart, name='cart'),
@@ -23,7 +21,9 @@ urlpatterns = [
     path('polityka-prywatnosci/', views.privacy_policy, name='privacy_policy'),
 
     # Product lists
-    path('produkty/detaliczny/', views.product_list_individual, name='product_list_individual'),
+    path('produkty/', views.product_list, name='product_list'),
+
+
     path('produkty/biznesowy/', views.product_list_b2b, name='product_list_b2b'),
 
     # Product detail (SEO-friendly slug)

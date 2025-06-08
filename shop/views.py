@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from .models import Product, Category
 
 
 # Home
@@ -11,11 +12,6 @@ def home(request):
 def product_entry_point(request):
     return render(request, 'shop/products/entry.html')
 
-# Product list for individual customers
-def product_list_individual(request):
-    return render(request, 'shop/products/product_list.html', {
-        'client_type': 'individual'
-    })
 
 # Product list for B2B customers (requires login)
 @login_required
@@ -65,3 +61,18 @@ def terms(request):
 # Privacy policy
 def privacy_policy(request):
     return render(request, 'shop/legal/privacy.html')
+
+def product_list(request):
+    category_id = request.GET.get('kategoria')  # ID kategorii z adresu URL
+    categories = Category.objects.all()
+
+    if category_id:
+        products = Product.objects.filter(category__id=category_id)
+    else:
+        products = Product.objects.all()
+
+    return render(request, 'shop/product_list.html', {
+        'products': products,
+        'categories': categories,
+        'selected_category': int(category_id) if category_id else None,
+    })
